@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a14"/>
+    </radialGradient>
+    <linearGradient id="knifeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#bf00ff"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg2)"/>
+  <!-- Floor grid -->
+  <g opacity="0.1" stroke="#4a4a6a" stroke-width="1">
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="280" x2="1280" y2="440"/>
+    <line x1="0" y1="200" x2="1280" y2="520"/>
+    <line x1="0" y1="120" x2="1280" y2="600"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+  </g>
+  <!-- Player stickman in center -->
+  <g transform="translate(640, 380)">
+    <!-- Player glow -->
+    <circle cx="0" cy="0" r="120" fill="#00f5ff" opacity="0.08" filter="url(#glow2)"/>
+    <circle cx="0" cy="0" r="70" fill="#00f5ff" opacity="0.12"/>
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="16" fill="none" stroke="#00f5ff" stroke-width="4"/>
+    <!-- Body -->
+    <line x1="0" y1="-14" x2="0" y2="22" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="0" y1="-3" x2="-26" y2="8" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="-3" x2="26" y2="8" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="0" y1="22" x2="-16" y2="48" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="22" x2="16" y2="48" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <!-- Inner orbit (4 knives) -->
+    <g>
+      <g transform="rotate(0)"><line x1="0" y1="-50" x2="0" y2="-68" stroke="#00f5ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-68 -4,-60 4,-60" fill="#00f5ff"/></g>
+      <g transform="rotate(90)"><line x1="0" y1="-50" x2="0" y2="-68" stroke="#00f5ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-68 -4,-60 4,-60" fill="#00f5ff"/></g>
+      <g transform="rotate(180)"><line x1="0" y1="-50" x2="0" y2="-68" stroke="#00f5ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-68 -4,-60 4,-60" fill="#00f5ff"/></g>
+      <g transform="rotate(270)"><line x1="0" y1="-50" x2="0" y2="-68" stroke="#00f5ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-68 -4,-60 4,-60" fill="#00f5ff"/></g>
+    </g>
+    <!-- Outer orbit (4 knives) -->
+    <g>
+      <g transform="rotate(45)"><line x1="0" y1="-95" x2="0" y2="-115" stroke="#bf00ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-115 -4,-107 4,-107" fill="#bf00ff"/></g>
+      <g transform="rotate(135)"><line x1="0" y1="-95" x2="0" y2="-115" stroke="#bf00ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-115 -4,-107 4,-107" fill="#bf00ff"/></g>
+      <g transform="rotate(225)"><line x1="0" y1="-95" x2="0" y2="-115" stroke="#bf00ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-115 -4,-107 4,-107" fill="#bf00ff"/></g>
+      <g transform="rotate(315)"><line x1="0" y1="-95" x2="0" y2="-115" stroke="#bf00ff" stroke-width="3" filter="url(#glow3)"/><polygon points="0,-115 -4,-107 4,-107" fill="#bf00ff"/></g>
+    </g>
+  </g>
+  <!-- Enemy 1 (top-left) -->
+  <g transform="translate(320, 200)">
+    <circle cx="0" cy="0" r="30" fill="#ff006e" opacity="0.1"/>
+    <circle cx="0" cy="-15" r="10" fill="none" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="-5" x2="0" y2="15" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="0" x2="-14" y2="8" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="0" x2="14" y2="8" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="15" x2="-10" y2="28" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="15" x2="10" y2="28" stroke="#ff4444" stroke-width="3"/>
+    <!-- Health bar -->
+    <rect x="-20" y="-35" width="40" height="4" fill="#333"/>
+    <rect x="-20" y="-35" width="28" height="4" fill="#ff4444"/>
+  </g>
+  <!-- Enemy 2 (top-right) -->
+  <g transform="translate(980, 240)">
+    <circle cx="0" cy="0" r="30" fill="#ff006e" opacity="0.1"/>
+    <circle cx="0" cy="-15" r="10" fill="none" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="-5" x2="0" y2="15" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="0" x2="-14" y2="8" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="0" x2="14" y2="8" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="15" x2="-10" y2="28" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="15" x2="10" y2="28" stroke="#ff8800" stroke-width="3"/>
+    <rect x="-20" y="-35" width="40" height="4" fill="#333"/>
+    <rect x="-20" y="-35" width="35" height="4" fill="#ff8800"/>
+  </g>
+  <!-- Enemy 3 (bottom-left) -->
+  <g transform="translate(260, 540)">
+    <circle cx="0" cy="0" r="30" fill="#ff006e" opacity="0.1"/>
+    <circle cx="0" cy="-15" r="10" fill="none" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="-5" x2="0" y2="15" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="0" x2="-14" y2="8" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="0" x2="14" y2="8" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="15" x2="-10" y2="28" stroke="#ff4444" stroke-width="3"/>
+    <line x1="0" y1="15" x2="10" y2="28" stroke="#ff4444" stroke-width="3"/>
+    <rect x="-20" y="-35" width="40" height="4" fill="#333"/>
+    <rect x="-20" y="-35" width="20" height="4" fill="#ff4444"/>
+  </g>
+  <!-- Enemy 4 (bottom-right) -->
+  <g transform="translate(1020, 560)">
+    <circle cx="0" cy="0" r="30" fill="#ff006e" opacity="0.1"/>
+    <circle cx="0" cy="-15" r="10" fill="none" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="-5" x2="0" y2="15" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="0" x2="-14" y2="8" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="0" x2="14" y2="8" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="15" x2="-10" y2="28" stroke="#ff8800" stroke-width="3"/>
+    <line x1="0" y1="15" x2="10" y2="28" stroke="#ff8800" stroke-width="3"/>
+    <rect x="-20" y="-35" width="40" height="4" fill="#333"/>
+    <rect x="-20" y="-35" width="30" height="4" fill="#ff8800"/>
+  </g>
+  <!-- HUD - Score -->
+  <rect x="30" y="25" width="180" height="44" rx="8" fill="rgba(0,0,0,0.6)" stroke="#00f5ff" stroke-width="1"/>
+  <text x="120" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#00f5ff" font-weight="bold">分数: 320</text>
+  <!-- HUD - Timer -->
+  <rect x="540" y="25" width="200" height="44" rx="8" fill="rgba(0,0,0,0.6)" stroke="#ff006e" stroke-width="1"/>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ff006e" font-weight="bold">⏱ 02:35</text>
+  <!-- HUD - Health -->
+  <rect x="1070" y="25" width="180" height="44" rx="8" fill="rgba(0,0,0,0.6)" stroke="#22c55e" stroke-width="1"/>
+  <text x="1160" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#22c55e" font-weight="bold">❤ 85 / 100</text>
+  <!-- Knife count -->
+  <rect x="30" y="650" width="160" height="44" rx="8" fill="rgba(0,0,0,0.6)" stroke="#bf00ff" stroke-width="1"/>
+  <text x="110" y="679" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#bf00ff">🗡 飞刀: 8</text>
+</svg>

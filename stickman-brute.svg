@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="bg4" cx="60%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#3d1515"/>
+      <stop offset="100%" stop-color="#0a0a14"/>
+    </radialGradient>
+    <filter id="bruteGlow">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg4)"/>
+  <!-- Danger red particles -->
+  <g opacity="0.4">
+    <circle cx="200" cy="200" r="4" fill="#ff0000"/>
+    <circle cx="1100" cy="300" r="3" fill="#ff4400"/>
+    <circle cx="300" cy="500" r="5" fill="#ff0000"/>
+    <circle cx="1000" cy="550" r="3" fill="#ff4400"/>
+    <circle cx="500" cy="150" r="3" fill="#ff0000"/>
+    <circle cx="800" cy="600" r="4" fill="#ff4400"/>
+  </g>
+  <!-- Player (smaller, bottom-left, fleeing) -->
+  <g transform="translate(320, 520)">
+    <circle cx="0" cy="0" r="50" fill="#00f5ff" opacity="0.06"/>
+    <circle cx="0" cy="-20" r="11" fill="none" stroke="#00f5ff" stroke-width="3"/>
+    <line x1="0" y1="-9" x2="0" y2="14" stroke="#00f5ff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="-2" x2="-18" y2="5" stroke="#00f5ff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="-2" x2="18" y2="5" stroke="#00f5ff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="14" x2="-10" y2="30" stroke="#00f5ff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="14" x2="10" y2="30" stroke="#00f5ff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Orbiting knives (smaller - level 1) -->
+    <g>
+      <g transform="rotate(0)"><line x1="0" y1="-40" x2="0" y2="-55" stroke="#00f5ff" stroke-width="2"/><polygon points="0,-55 -3,-48 3,-48" fill="#00f5ff"/></g>
+      <g transform="rotate(120)"><line x1="0" y1="-40" x2="0" y2="-55" stroke="#bf00ff" stroke-width="2"/><polygon points="0,-55 -3,-48 3,-48" fill="#bf00ff"/></g>
+      <g transform="rotate(240)"><line x1="0" y1="-40" x2="0" y2="-55" stroke="#ff006e" stroke-width="2"/><polygon points="0,-55 -3,-48 3,-48" fill="#ff006e"/></g>
+    </g>
+  </g>
+  <!-- Giant Brute enemy (center-right) -->
+  <g transform="translate(780, 360)">
+    <!-- Aura of danger -->
+    <circle cx="0" cy="0" r="160" fill="#ff0000" opacity="0.08" filter="url(#bruteGlow)"/>
+    <circle cx="0" cy="0" r="110" fill="#ff0000" opacity="0.12"/>
+    <!-- Body - much larger and thicker -->
+    <circle cx="0" cy="-45" r="32" fill="none" stroke="#cc0000" stroke-width="6"/>
+    <!-- Glowing red eyes -->
+    <circle cx="-12" cy="-48" r="4" fill="#ff0000" filter="url(#bruteGlow)"/>
+    <circle cx="12" cy="-48" r="4" fill="#ff0000" filter="url(#bruteGlow)"/>
+    <!-- Angry brow -->
+    <line x1="-20" y1="-58" x2="-6" y2="-52" stroke="#cc0000" stroke-width="4"/>
+    <line x1="6" y1="-52" x2="20" y2="-58" stroke="#cc0000" stroke-width="4"/>
+    <!-- Thick torso -->
+    <line x1="0" y1="-13" x2="0" y2="40" stroke="#cc0000" stroke-width="8" stroke-linecap="round"/>
+    <!-- Massive arms -->
+    <line x1="0" y1="0" x2="-50" y2="20" stroke="#cc0000" stroke-width="7" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="50" y2="20" stroke="#cc0000" stroke-width="7" stroke-linecap="round"/>
+    <!-- Fists -->
+    <circle cx="-52" cy="22" r="10" fill="none" stroke="#cc0000" stroke-width="4"/>
+    <circle cx="52" cy="22" r="10" fill="none" stroke="#cc0000" stroke-width="4"/>
+    <!-- Thick legs -->
+    <line x1="0" y1="40" x2="-28" y2="80" stroke="#cc0000" stroke-width="7" stroke-linecap="round"/>
+    <line x1="0" y1="40" x2="28" y2="80" stroke="#cc0000" stroke-width="7" stroke-linecap="round"/>
+    <!-- Armor plates -->
+    <rect x="-22" y="-8" width="44" height="30" rx="4" fill="none" stroke="#660000" stroke-width="2" opacity="0.6"/>
+    <line x1="-22" y1="7" x2="22" y2="7" stroke="#660000" stroke-width="2" opacity="0.6"/>
+    <!-- Health bar - huge, full health -->
+    <rect x="-60" y="-90" width="120" height="8" fill="#333" rx="2"/>
+    <rect x="-60" y="-90" width="120" height="8" fill="#ff0000" rx="2"/>
+    <text x="0" y="-96" text-anchor="middle" font-family="Arial Black" font-size="16" fill="#ff0000" font-weight="900">BRUTE</text>
+    <!-- "No stun" indicator -->
+    <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ff8800">⚠ 免疫击退</text>
+  </g>
+  <!-- Knife hitting brute but doing minimal effect -->
+  <g transform="translate(680, 360)" opacity="0.7">
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#00f5ff" stroke-width="3"/>
+    <polygon points="0,-10 -4,-2 4,-2" fill="#00f5ff"/>
+    <!-- Spark effect -->
+    <circle cx="0" cy="0" r="8" fill="#ffdd00" opacity="0.6"/>
+  </g>
+  <!-- Warning text -->
+  <text x="640" y="80" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="36" fill="#ff0000" font-weight="900" opacity="0.9">⚠ 重型敌人出现 ⚠</text>
+  <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ff8888">生命值: 100 | 免疫硬直</text>
+  <!-- HUD -->
+  <rect x="30" y="630" width="180" height="44" rx="8" fill="rgba(0,0,0,0.6)" stroke="#ff0000" stroke-width="1"/>
+  <text x="120" y="659" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ff4444" font-weight="bold">敌人: 重型</text>
+</svg>
